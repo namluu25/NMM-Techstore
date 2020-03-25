@@ -27,7 +27,7 @@ Time is a valuable thing. With time, we use it to think, to work, to relax or to
 
 ## Instructions & Installation Guidelines
 
-- Step 1: Clone Repo of the project to your device
+- Step 1: Clone Repo of the project to your device by "git clone https://github.com/namluu25/NMM-Techstore.git"
 - Step 2: Install all the necessary files & documents to run the application:
 Xampp
 Visual Code: VS or Sublime Text 3
