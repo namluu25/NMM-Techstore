@@ -4,7 +4,7 @@
     <!-- Banner -->
 
     <div class="banner">
-        <div class="banner_background" style="background-image:url(homepage/images/banner_background.jpg)"></div>
+        <div class="banner_background" style="background-image:url(homepage/images/banner_background.jpg"></div>
         <div class="container fill_height">
             <div class="row fill_height">
                 <div class="banner_product_image"><img src="{{asset('homepage/images/banner_product.png')}}" alt=""></div>
@@ -247,7 +247,7 @@
                                 <div class="tabs_line"><span></span></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
                             <div class="product_panel panel active">
                                 <div class="featured_slider slider">
 
@@ -258,7 +258,7 @@
                                             <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="{{asset('homepage/images/featured_1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name"><div><a href="{{route('product')}}">Huawei MediaPad...</a></div></div>
+                                                <div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color" style="background:#b19c83">
@@ -655,7 +655,7 @@
                                 <div class="featured_slider_dots_cover"></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
 
                             <div class="product_panel panel">
                                 <div class="featured_slider slider">
@@ -1064,7 +1064,7 @@
                                 <div class="featured_slider_dots_cover"></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
 
                             <div class="product_panel panel">
                                 <div class="featured_slider slider">
@@ -1658,7 +1658,7 @@
                         <div class="row">
                             <div class="col-lg-9" style="z-index:1;">
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel active">
                                     <div class="arrivals_slider slider">
 
@@ -2065,7 +2065,7 @@
                                     <div class="arrivals_slider_dots_cover"></div>
                                 </div>
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel">
                                     <div class="arrivals_slider slider">
 
@@ -2472,7 +2472,7 @@
                                     <div class="arrivals_slider_dots_cover"></div>
                                 </div>
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel">
                                     <div class="arrivals_slider slider">
 
