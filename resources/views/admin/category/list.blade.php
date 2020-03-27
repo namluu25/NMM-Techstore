@@ -25,8 +25,7 @@
                             <tr>
                                 <td class="text-center">{{$item->id}}</td>
                                 <td>{{$item->name}}</td>
-                                <td class="text-center" width="20px"><button class="btn btn-primary">Edit</button></td>
-                                <td class="text-center" width="20px"><button class="btn btn-danger">Delete</button></td>
+
                             </tr>
                         @endforeach
                     </tbody>

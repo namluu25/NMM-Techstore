@@ -26,4 +26,5 @@ class CategoryController extends Controller
         $listCategory = Category::all();
         return view('admin.category.list')->with('listCategory',$listCategory);
     }
+
 }

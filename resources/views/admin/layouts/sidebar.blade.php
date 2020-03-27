@@ -28,8 +28,7 @@
             </a>
             <div class="collapse" id="category">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">List</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Add</a></li>
+
                 </ul>
             </div>
         </li>
@@ -41,12 +40,13 @@
             </a>
             <div class="collapse" id="product">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="#">List</a></li>
+
                     <li class="nav-item"> <a class="nav-link" href="{{asset('admin/product/add')}}">Add</a></li>
                 </ul>
             </div>
         </li>
         <li class="nav-item">
+
             <a class="nav-link" href="pages/icons/mdi.html">
                 <span class="menu-title">Icons</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
