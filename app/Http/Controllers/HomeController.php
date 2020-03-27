@@ -21,15 +21,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function homepage()
+    public function index()
     {
         return view('homepage.index');
     }
     public function blog(){
         return view('homepage.blog');
     }
-    public function blogdetail(){
-        return view('homepage.blog-detail');
+    public function blogSingle(){
+        return view('homepage.blog_single');
     }
     public function cart(){
         return view('homepage.cart');
@@ -43,7 +43,7 @@ class HomeController extends Controller
     public function regular(){
         return view('homepage.regular');
     }
-    public function category(){
-        return view('homepage.category');
+    public function shop(){
+        return view('homepage.shop');
     }
 }
