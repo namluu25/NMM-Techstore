@@ -64,15 +64,13 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('blog','HomeController@blog');
     Route::get('cart','HomeController@cart');
     Route::get('contact','HomeController@contact');
-    Route::get('product','HomeController@product');
+    Route::get('product/{id}','HomeController@product');
     Route::get('regular','HomeController@regular');
     Route::get('category','HomeController@category');
     Route::get('checkout','HomeController@checkout');
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');
-    Route::post('login','HomeController@postLogin');
     Route::get('registration','HomeController@registration');
-    Route::post('registration','HomeController@postRegistration') ; 
     Route::get('tracking','HomeController@tracking');
 
 });
