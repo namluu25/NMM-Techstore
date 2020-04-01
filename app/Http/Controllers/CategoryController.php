@@ -14,7 +14,7 @@ class CategoryController extends Controller
     }
     //return view list category
     function ListCategory(){
-        $listCategory = Category::all();
+        $listCategory = Category::paginate(5);
         return view('admin.category.list')->with('listCategory',$listCategory);
     }
     function SaveCategory(Request $request){
@@ -26,5 +26,19 @@ class CategoryController extends Controller
         $listCategory = Category::all();
         return view('admin.category.list')->with('listCategory',$listCategory);
     }
-
+    function EditCategory($id){
+        $category = Category::find($id);
+        return view('admin.category.edit',['category'=>$category]);
+    }
+    function postEditCategory(Request $request,$id){
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->save();
+        return redirect('admin/category/list');
+    }
+    function DeleteCategory($id){
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('admin/category/list');
+    }
 }
