@@ -14,7 +14,7 @@ class CategoryController extends Controller
     }
     //return view list category
     function ListCategory(){
-        $listCategory = Category::paginate(5);
+        $listCategory = Category::all();
         return view('admin.category.list')->with('listCategory',$listCategory);
     }
     function SaveCategory(Request $request){
