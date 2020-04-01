@@ -23,9 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/login','AuthController@login');
 Route::post('admin/login','AuthController@postLogin');
 
-Route::get('admin', function (){
-        return view('admin.dashboard.dashboard');
-});
+// Route::get('admin', function (){
+//         return view('admin.dashboard.dashboard');
+// });
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
     
      Route::get('/dashboard', function (){
