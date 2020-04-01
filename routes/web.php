@@ -15,17 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', function (){
-    return view('admin.dashboard.dashboard');
-});
 
-Route::group(['prefix'=>'/admin'],function(){
-    Route::get('/dashboard', function (){
+
+Route::get('admin/login','AuthController@login');
+Route::post('admin/login','AuthController@postLogin');
+
+Route::get('admin', function (){
         return view('admin.dashboard.dashboard');
-    });
+});
+Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
+    
+     Route::get('/dashboard', function (){
+         return view('admin.dashboard.dashboard');
+     });
+    
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');
         Route::post('/add','ProductController@SaveProduct');
@@ -51,11 +57,22 @@ Route::group(['prefix'=>'/admin'],function(){
     });
 
 });
-Route::get('/blog',['as'=>'blog','uses'=>'HomeController@blog']);
-Route::get('blog_single',['as'=>'blog_signle','uses'=>'HomeController@blogSingle']);
-Route::get('cart',['as'=>'cart','uses'=>'HomeController@cart']);
-Route::get('/contact',['as'=>'contact','uses'=>'HomeController@contact']);
-Route::get('/product',['as'=>'product','uses'=>'HomeController@product']);
-Route::get('/regular',['as'=>'regular','uses'=>'HomeController@regular']);
-Route::get('/shop',['as'=>'shop','uses'=>'HomeController@shop']);
+
+Route::group(['prefix'=>'/shop'],function(){
+    Route::get('homepage','HomeController@homepage');
+    Route::get('blog-detail','HomeController@blogdetail');
+    Route::get('blog','HomeController@blog');
+    Route::get('cart','HomeController@cart');
+    Route::get('contact','HomeController@contact');
+    Route::get('product','HomeController@product');
+    Route::get('regular','HomeController@regular');
+    Route::get('category','HomeController@category');
+    Route::get('checkout','HomeController@checkout');
+    Route::get('confirmation','HomeController@confirmation');
+    Route::get('login','HomeController@login');
+    Route::get('registration','HomeController@registration');
+    Route::get('tracking','HomeController@tracking');
+
+});
+
 
