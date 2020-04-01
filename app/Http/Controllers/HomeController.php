@@ -7,29 +7,22 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function homepage()
     {
         return view('homepage.index');
     }
     public function blog(){
         return view('homepage.blog');
     }
-    public function blogSingle(){
-        return view('homepage.blog_single');
+    public function blogdetail(){
+        return view('homepage.blog-detail');
     }
     public function cart(){
         return view('homepage.cart');
@@ -43,7 +36,22 @@ class HomeController extends Controller
     public function regular(){
         return view('homepage.regular');
     }
-    public function shop(){
-        return view('homepage.shop');
+    public function category(){
+        return view('homepage.category');
+    }
+    public function checkout(){
+        return view('homepage.checkout');
+    }
+    public function confirmation(){
+        return view('homepage.confirmation');
+    }
+    public function login(){
+        return view('homepage.login');
+    }
+    public function registration(){
+        return view('homepage.registration');
+    }
+    public function tracking(){
+        return view('homepage.tracking');
     }
 }
