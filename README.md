@@ -29,10 +29,10 @@ Time is a valuable thing. With time, we use it to think, to work, to relax or to
 
 - Step 1: Clone Repo of the project to your device by "git clone https://github.com/namluu25/NMM-Techstore.git"
 - Step 2: Install all the necessary files & documents to run the application:
-Xampp
-Visual Code: VS or Sublime Text 3
-Composer
-- Step 3: Access “localhost” and add file “ se03_database.sql “ for database & run the application 
+- Xampp
+- Visual Code Studio or Sublime Text 3
+- Composer
+- Step 3: Access “localhost” and add file “ nmm_database.sql “ for database & run the application 
 
 
 
