@@ -25,7 +25,7 @@
                         <tr>
                             <td class="text-center">{{$item->id}}</td>
                             <td>{{$item->name}}</td>
-                            <td class="text-center" width="20px"><a href="admin/brand/edit/{{$item->id}}"><button class="btn btn-danger"> Edit</button></a></td>
+                            <td class="text-center" width="20px"><a href="admin/brand/edit/{{$item->id}}"><button class="btn btn-primary"> Edit</button></a></td>
                             <td class="text-center" width="20px"><a href="admin/brand/delete/{{$item->id}}"><button class="btn btn-danger">Delete</button></a></td>
                         </tr>
                     @endforeach
