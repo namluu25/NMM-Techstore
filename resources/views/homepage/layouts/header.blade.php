@@ -3,8 +3,8 @@
     <div class="top_menu row m0">
         <div class="container">
             <div class="float-left">
-                <a href="mailto:viethai.trx@gmail.com">support@abc.com</a>
-                <a href="#">Welcome to Shop</a>
+                <a href="mailto:namluu253@gmail.com">namluu253@gmail.com</a>
+                <a href="#">Welcome to NMM Techstore</a>
             </div>
 
             <div class="float-right d-flex">
@@ -26,7 +26,6 @@
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -35,7 +34,7 @@
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="/se03/public/shop/homepage"><img src="{{asset('homepage/img/logo.png')}}" alt=""></a>
+                <a class="navbar-brand logo_h" href="/nmm/public/shop/homepage"><img src="{{asset('homepage/img/logo.png')}}" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -50,14 +49,6 @@
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="{{asset('shop/category/1')}}">Theo loại</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{asset('shop/brand/1')}}">Theo hãng</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item submenu dropdown">
-                            <a href="/Home/Blog" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="{{asset('shop/blog')}}">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{asset('shop/blog-detail')}}">Blog Details</a></li>
                             </ul>
                         </li>
 

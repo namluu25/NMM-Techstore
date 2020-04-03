@@ -39,13 +39,13 @@
                             <div class="col-lg-4 col-md-4 col-sm-6">
                                 <div class="f_p_item">
                                     <div class="f_p_img">
-                                        <img height="262" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
+                                        <img height="262" src="/nmm/public/{{$item->images[0]->image_path}}" alt="">
                                         <div class="p_icon">
                                             <a style="cursor: pointer" class="wish-list" productid="{{$item->id}}"><i class="lnr lnr-heart"></i></a>
                                             <a style="cursor: pointer" class="add-to-cart" productid="{{$item->id}}"><i class="lnr lnr-cart"></i></a>
                                         </div>
                                     </div>
-                                    <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
+                                    <a href="/nmm/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
                                     @if($item->promotion_price!=0)
                                         <h5><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
                                     @else
@@ -99,7 +99,7 @@
 
                         <div class="f_p_item">
                             <div class="f_p_img">
-                                <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+                                <img class="img-fluid" src="/nmm/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
                                 <div class="p_icon">
                                     <a style="cursor: pointer" class="wish-list" productid="{{$item->id}}"><i class="lnr lnr-heart"></i></a>
                                     <a style="cursor: pointer" class="add-to-cart" productid="{{$item->id}}"><i class="lnr lnr-cart"></i></a>

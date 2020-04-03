@@ -1,0 +1,54 @@
+# Query: SE03
+
+31 results - 10 files
+
+.env:
+  13: DB_DATABASE=se03_database
+
+README.md:
+  1: # SE03-Group02
+  21: * B1: Clone repo của dự án về máy bằng câu lệnh "git clone https://github.com/trannhuson/SE03-Group02.git"
+  26: * B3: Vào localhost add file se03_database.sql vào để thêm cơ sở dữ liệu và chạy chương trình
+
+.idea/modules.xml:
+  5:       <module fileurl="file://$PROJECT_DIR$/.idea/Market-SE03-Group02.iml" filepath="$PROJECT_DIR$/.idea/Market-NMM.iml" />
+
+resources/views/homepage/brand.blade.php:
+  42:                                     <img height="262" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
+  48:                                 <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
+  103:                             <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+
+resources/views/homepage/cart.blade.php:
+  42:                                         <img src="/se03/public/{{$item->product->images[0]->image_path}}" width="55px" alt="">
+
+resources/views/homepage/category.blade.php:
+  42:                                         <img height="262" src="/se03/public/{{$item->images[0]->image_path}}" alt="">
+  48:                                     <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
+  102:                                 <img class="img-fluid" src="/se03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+
+resources/views/homepage/index.blade.php:
+  16:                             <img src="/se03/public/uploads/product_images/homepage.png" alt="">
+  56:         <div style="background-image: url('/se03/public/homepage/img/background3.png');">
+  106:                                     <img height="262" src="/se03/public/{{$featureItem->images[0]->image_path}}" alt="">
+  112:                                 <a href="/se03/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
+  143:                                     <img height="262" src="/se03/public/{{$latestItem->images[0]->image_path}}" alt="">
+  149:                                 <a href="/se03/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
+  169:                     <h2 class="phukien_title" style="color:red"><a href="/se03/public/shop/category/5">Phụ kiện điện thoại</a></h2>
+  178:                                     <img src="/se03/public/{{$ac1->images[0]->image_path}}" height="70" width="70" alt="">
+  181:                                     <a href="/se03/public/shop/product/{{$ac1->id}}"><h4>{{$ac1->name}}</h4></a>
+  197:                                     <img src="/se03/public/{{$ac2->images[0]->image_path}}" height="70" width="70" alt="">
+  200:                                     <a href="/se03/public/shop/product/{{$ac2->id}}"><h4>{{$ac2->name}}</h4></a>
+  216:                                     <img src="/se03/public/{{$ac3->images[0]->image_path}}" height="70" width="70" alt="">
+  219:                                     <a href="/se03/public/shop/product/{{$ac3->id}}"><h4>{{$ac3->name}}</h4></a>
+
+resources/views/homepage/product.blade.php:
+  3: 	<link rel="stylesheet" type="text/css" href="/se03/public/css/homepage/product_styles.css">
+  4: 	<link rel="stylesheet" type="text/css" href="/se03/public/css/homepage/product_responsive.css">
+  19: 				<div class="image_selected"><img src="/se03/public/{{$product->images[0]->image_path}}" alt=""></div>
+  76:                             <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+
+resources/views/homepage/wishlist.blade.php:
+  42:                                             <img src="/se03/public/{{$item->products->images[0]->image_path}}" width="55px" alt="">
+
+resources/views/homepage/layouts/header.blade.php:
+  38:                 <a class="navbar-brand logo_h" href="/se03/public/shop/homepage"><img src="{{asset('homepage/img/logo.png')}}" alt=""></a>

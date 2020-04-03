@@ -5,7 +5,8 @@
             <div class="col-lg-3  col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6 class="footer_title">About Us</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                    <p>NMM is a technology online store which was made by 3 members of group 15: Luu Hai Nam, Nguyen Hoang Minh & Trinh Tuan Minh. This website is basically used to buy technology devices and it is very easy to use. Hope you guys have fun buying all those technology.
+For further information: namluu253@gmail.com</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
@@ -46,7 +47,6 @@
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
                     </div>
                 </div>
             </div>

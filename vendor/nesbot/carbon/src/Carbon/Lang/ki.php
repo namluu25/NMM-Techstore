@@ -11,8 +11,8 @@
 return array_replace_recursive(require __DIR__.'/en.php', [
     'meridiem' => ['Kiroko', 'Hwaĩ-inĩ'],
     'weekdays' => ['Kiumia', 'Njumatatũ', 'Njumaine', 'Njumatana', 'Aramithi', 'Njumaa', 'Njumamothi'],
-    'weekdays_short' => ['KMA', 'NTT', 'NMN', 'NMT', 'ART', 'NMA', 'NMM'],
-    'weekdays_min' => ['KMA', 'NTT', 'NMN', 'NMT', 'ART', 'NMA', 'NMM'],
+    'weekdays_short' => ['KMA', 'NTT', 'NMN', 'NMT', 'ART', 'NMA', 'nmm'],
+    'weekdays_min' => ['KMA', 'NTT', 'NMN', 'NMT', 'ART', 'NMA', 'nmm'],
     'months' => ['Njenuarĩ', 'Mwere wa kerĩ', 'Mwere wa gatatũ', 'Mwere wa kana', 'Mwere wa gatano', 'Mwere wa gatandatũ', 'Mwere wa mũgwanja', 'Mwere wa kanana', 'Mwere wa kenda', 'Mwere wa ikũmi', 'Mwere wa ikũmi na ũmwe', 'Ndithemba'],
     'months_short' => ['JEN', 'WKR', 'WGT', 'WKN', 'WTN', 'WTD', 'WMJ', 'WNN', 'WKD', 'WIK', 'WMW', 'DIT'],
     'formats' => [

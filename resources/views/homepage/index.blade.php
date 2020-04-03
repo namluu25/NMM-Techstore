@@ -8,12 +8,12 @@
             <div class="container">
                 <div class="banner_content row">
                     <div class="col-lg-6">
-                        <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
+                        <h3 style="color:#000000">Chào mừng đến với<br /><b><i>NMM Techstore</i></b> !</h3>
                         <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
-                            <img src="/se03/public/uploads/product_images/homepage.png" alt="">
+                            <img src="/nmm/public/uploads/product_images/homepage.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -29,35 +29,30 @@
                 <div class="row hot_product_inner">
                      <div class="col-lg-6">
                         <div class="hot_p_item">
-                            <img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-1.jpg')}}" alt="">
-                            <div class="product_text">
-                                <h4 style="color:#1f1f1f">Deal hot <br />trong tháng</h4>
-                                <!-- Nút Brand Samsung -->
-                                <a href="{{asset('shop/brand/2')}}" style="color:#1f1f1f"><b>Shopping</b></a>
-                            </div>
+                            <a href="{{asset('shop/brand/2')}}"><img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-1.jpg')}}" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="hot_p_item">
-                            <img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-2.jpg')}}" alt="">
-                            <div class="product_text">
-                                <h4 style="color:#ffffff">Deal hot <br />trong tháng</h4>
-                                <!-- Nút Brand Apple -->
-                                <a href="{{asset('shop/brand/1')}}" style="color:#ffffff"><b>Shopping</b></a>
-                            </div>
+                            <a href="{{asset('shop/brand/1')}}"><img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-2.jpg')}}" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div style="margin: 25px 0 0 0;">
+                            <img alt="CÔ VY LÀM KHÓ CÓ NMM LO" src="{{asset('homepage/img/product/hot-product/hot-p-3.png')}}" title="CÔ VY LÀM KHÓ CÓ NMM LO" width="100%">
+                </div>
+                
             </div>
         </div>
     </section>
     <!--================Clients Logo Area =================-->
     <section class="clients_logo_area">
-        <div style="background-image: url('/se03/public/homepage/img/background3.png');">
+        <div style="background-image: url('/nmm/public/homepage/img/background2.png');">
             <div class="container">
                 <div class="main_title">
                     <h2>Thương hiệu nổi bật</h2>
-                    <p>Những thương hiệu hàng đầu</p>
                 </div>
                 <div class="clients_slider owl-carousel">
                     <div class="item">
@@ -94,22 +89,26 @@
         <div class="main_box">
             <div class="container">
                 <div class="feature_product_inner">
-                    <div class="main_title">
-                        <h2>Sản phẩm nổi bật</h2>
-                        <p>Những sản phẩm được yêu thích nhất</p>
-                    </div>
+                    <div class="section-header flashsale_samsung">
+				        <div class="main_title">
+							    			<img src="{{asset('homepage/img/product/hot-product/flashsale.gif')}}" style="width: 250px;height:auto;vertical-align:middle;" alt="flashsale">
+		    						</div>
+				    <div class="clear"></div>
+			            </div>
                     <div class="feature_p_slider owl-carousel">
                         @foreach($featureProduct as $featureItem)
                         <div class="item">
                             <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img height="262" src="/se03/public/{{$featureItem->images[0]->image_path}}" alt="">
+                                <div class="f_p_img">   
+                                    <a href="/nmm/public/shop/product/{{$featureItem->id}}">
+                                    <img height="262" src="/nmm/public/{{$featureItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a style="cursor: pointer" class="wish-list" productid="{{$featureItem->id}}"><i class="lnr lnr-heart"></i></a>
                                         <a style="cursor: pointer" class="add-to-cart" productid="{{$featureItem->id}}"><i class="lnr lnr-cart"></i></a>
                                     </div>
+                                    </a>
                                 </div>
-                                <a href="/se03/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
+                                <a href="/nmm/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
                                 @if($featureItem->promotion_price!=0)
                                     <h5 ><strike class="mr-1">{{$featureItem->unit_price}}đ</strike><span style="color: red">{{$featureItem->promotion_price}}đ</h5></span>
                                 @else
@@ -140,13 +139,15 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
-                                    <img height="262" src="/se03/public/{{$latestItem->images[0]->image_path}}" alt="">
+                                    <a href="/nmm/public/shop/product/{{$latestItem->id}}">
+                                    <img height="262" src="/nmm/public/{{$latestItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a style="cursor: pointer" class="wish-list" productid="{{$latestItem->id}}"><i class="lnr lnr-heart"></i></a>
                                         <a style="cursor: pointer" class="add-to-cart" productid="{{$latestItem->id}}"><i class="lnr lnr-cart"></i></a>
                                     </div>
+                                    </a>
                                 </div>
-                                <a href="/se03/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
+                                <a href="/nmm/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
                                 @if($latestItem->promotion_price!=0)
                                     <h5 ><strike class="mr-1">{{$latestItem->unit_price}}đ</strike><span style="color: red">{{$latestItem->promotion_price}}đ</h5></span>
                                 @else
@@ -166,7 +167,7 @@
         <div class="main_box">
             <div class="container">
                 <div class="main_title">
-                    <h2 class="phukien_title" style="color:red"><a href="/se03/public/shop/category/5">Phụ kiện điện thoại</a></h2>
+                    <h2 class="phukien_title" style="color:red"><a href="/nmm/public/shop/category/5">Phụ kiện điện thoại</a></h2>
                     <p>Những phụ kiện không thể thiếu cho dế yêu của bạn</p>
                 </div>
                 <div class="row most_product_inner">
@@ -175,10 +176,12 @@
                             @foreach($accessories1 as $ac1)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="/se03/public/{{$ac1->images[0]->image_path}}" height="70" width="70" alt="">
+                                    <a href="/nmm/public/shop/product/{{$ac1->id}}">
+                                        <img src="/nmm/public/{{$ac1->images[0]->image_path}}" height="70" width="70" alt="">
+                                    </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="/se03/public/shop/product/{{$ac1->id}}"><h4>{{$ac1->name}}</h4></a>
+                                    <a href="/nmm/public/shop/product/{{$ac1->id}}"><h4>{{$ac1->name}}</h4></a>
                                     @if($ac1->promotion_price!=0)
                                     <h3><strike class="mr-1">{{$ac1->unit_price}}đ</strike><span style="color: red">{{$ac1->promotion_price}}đ</h3></span>
                                 @else
@@ -194,10 +197,12 @@
                             @foreach($accessories2 as $ac2)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="/se03/public/{{$ac2->images[0]->image_path}}" height="70" width="70" alt="">
+                                    <a href="/nmm/public/shop/product/{{$ac2->id}}">    
+                                    <img src="/nmm/public/{{$ac2->images[0]->image_path}}" height="70" width="70" alt="">
+                                    </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="/se03/public/shop/product/{{$ac2->id}}"><h4>{{$ac2->name}}</h4></a>
+                                    <a href="/nmm/public/shop/product/{{$ac2->id}}"><h4>{{$ac2->name}}</h4></a>
                                     @if($ac2->promotion_price!=0)
                                     <h3><strike class="mr-1">{{$ac2->unit_price}}đ</strike><span style="color: red">{{$ac2->promotion_price}}đ</h3></span>
                                 @else
@@ -213,10 +218,12 @@
                             @foreach($accessories3 as $ac3)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="/se03/public/{{$ac3->images[0]->image_path}}" height="70" width="70" alt="">
+                                <a href="/nmm/public/shop/product/{{$ac3->id}}">
+                                    <img src="/nmm/public/{{$ac3->images[0]->image_path}}" height="70" width="70" alt="">
+                                </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="/se03/public/shop/product/{{$ac3->id}}"><h4>{{$ac3->name}}</h4></a>
+                                    <a href="/nmm/public/shop/product/{{$ac3->id}}"><h4>{{$ac3->name}}</h4></a>
                                     @if($ac3->promotion_price!=0)
                                     <h3><strike class="mr-1">{{$ac3->unit_price}}đ</strike><span style="color: red">{{$ac3->promotion_price}}đ</h3></span>
                                 @else

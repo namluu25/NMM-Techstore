@@ -1,7 +1,7 @@
 @extends('homepage.layouts.main')
 @section('content')
-	<link rel="stylesheet" type="text/css" href="/se03/public/css/homepage/product_styles.css">
-	<link rel="stylesheet" type="text/css" href="/se03/public/css/homepage/product_responsive.css">
+	<link rel="stylesheet" type="text/css" href="/nmm/public/css/homepage/product_styles.css">
+	<link rel="stylesheet" type="text/css" href="/nmm/public/css/homepage/product_responsive.css">
 <!-- Single Product -->
 <div class="container">
 	<div class="row">
@@ -16,7 +16,7 @@
 			<!-- Images -->
 			<!-- Selected Image -->
 			<div class="col-lg-5 order-1">
-				<div class="image_selected"><img src="/se03/public/{{$product->images[0]->image_path}}" alt=""></div>
+				<div class="image_selected"><img src="/nmm/public/{{$product->images[0]->image_path}}" alt=""></div>
 			</div>
 
 			<!-- Description -->
@@ -73,7 +73,7 @@
 
                     <div class="f_p_item">
                         <div class="f_p_img">
-                            <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+                            <img class="img-fluid" src="/nmm/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
                             <div class="p_icon">
                                 <a href="#"><i class="lnr lnr-heart"></i></a>
                                 <a href="#"><i class="lnr lnr-cart"></i></a>

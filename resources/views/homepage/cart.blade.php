@@ -34,12 +34,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($cart as $item)
+                        @foreach ($cart as $item)
                         <tr>
                             <td>
                                 <div class="media">
                                     <div class="d-flex">
-                                        <img src="/se03/public/{{$item->product->images[0]->image_path}}" width="55px" alt="">
+                                        <img src="/nmm/public/{{$item->product->images[0]->image_path}}" width="55px" alt="">
                                     </div>
                                     <div class="media-body">
                                         <p>{{$item->product->name}}</p>

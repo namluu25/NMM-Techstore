@@ -24,16 +24,16 @@
                 <div class="info_item">
                     <i class="lnr lnr-home"></i>
                     <h6>Hà Nội, Việt Nam</h6>
-                    <p>Đại học Khoa học Tự nhiên, ĐHQGHN</p>
+                    <p>Đại học Khoa học và Công nghệ Hà Nội</p>
                 </div>
                 <div class="info_item">
                     <i class="lnr lnr-phone-handset"></i>
-                    <h6><a href="#">(+84) 961317991</a></h6>
+                    <h6><a href="#">(+84) 912345678</a></h6>
                     <p>Mon to Fri 9am to 6 pm</p>
                 </div>
                 <div class="info_item">
                     <i class="lnr lnr-envelope"></i>
-                    <h6><a href="#">viethai.trx@gmail.com</a></h6>
+                    <h6><a href="#">namluu253@gmail.com</a></h6>
                 </div>
             </div>
         </div>

@@ -39,7 +39,7 @@
                                 <td>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="/se03/public/{{$item->products->images[0]->image_path}}" width="55px" alt="">
+                                            <img src="/nmm/public/{{$item->products->images[0]->image_path}}" width="55px" alt="">
                                         </div>
                                         <div class="media-body">
                                             <p>{{$item->products->name}}</p>
