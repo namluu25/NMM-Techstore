@@ -1,3 +1,4 @@
+
 @extends('homepage.layouts.main')
 @section('content')
 
@@ -133,7 +134,7 @@
                             </div>
                         </div>
                     @endforeach
-                    </div>
+                    </div>    
                 </div>
             </div>
         </div>

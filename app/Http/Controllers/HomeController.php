@@ -8,6 +8,7 @@ use App\Customer;
 use App\Product;
 use App\Category;
 use App\Brand;
+use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller
@@ -17,11 +18,9 @@ class HomeController extends Controller
      *
      * @return void
      */
-    /*public function __construct()
-    {
-        $this->middleware('auth');
-    }
-*/
+
+
+
     /**
      * Show the application dashboard.
      *
@@ -29,15 +28,19 @@ class HomeController extends Controller
      */
     public function homepage()
     {
-        $featureProduct = Product::orderBy('created_at', 'DESC')->limit(8)->get();
-        // dd($featureProduct);
-        return view('homepage.index')->with('featureProduct', $featureProduct);
+        $latestProduct = Product::where('category_id', 1)->whereIn('brand_id', [1, 2])->orderBy('created_at', 'DESC')->limit(8)->get();
+        $featureProduct = Product::where('brand_id', 1)->limit(8)->get();
+        $accessories1 = Product::whereIn('id', [69, 70, 71])->get();
+        $accessories2 = Product::whereIn('id', [72, 73, 74])->get();
+        $accessories3 = Product::whereIn('id', [75, 76, 77])->get();
+        // d($accessories1);
+        return view('homepage.index')->with(['latestProduct'=>$latestProduct, 'featureProduct'=>$featureProduct, 'accessories1'=>$accessories1, 'accessories2'=>$accessories2, 'accessories3'=>$accessories3]);
     }
     public function blog(){
         return view('homepage.blog');
     }
     public function blogdetail(){
-        return view('homepage.blog-detail');    
+        return view('homepage.blog-detail');
     }
     public function cart(){
         return view('homepage.cart');
@@ -53,10 +56,10 @@ class HomeController extends Controller
     public function regular(){
         return view('homepage.regular');
     }
+
     public function category($type){
-        // $sp = Product::all()->paginate(6);
-        $sp_theoloai = Product::where('category_id', $type)->paginate(6);
-        $sp_khac = Product::where('category_id','<>',$type)->paginate(6);
+        $sp_theoloai = Product::where('category_id', $type)->paginate(12);
+        $sp_khac = Product::where('category_id','<>',$type)->paginate(12);
         $loai_sp = Category::where('id',$type)->first();
         $categorys = Category::all();
         $brands = Brand::all();
@@ -69,24 +72,42 @@ class HomeController extends Controller
         return view('homepage.confirmation');
     }
     public function login(){
+        if(Auth::guard('customer')->check()){
+            return redirect('shop/homepage');
+        }
         return view('homepage.login');
     }
     public function postLogin(Request $request){
         $this->validate($request,
             [
-                'username'=>'required',
+                'email'=>'required',
                 'password'=>'required|min:3|max:32',
             ],
             [
-                'username.required'=>'Bạn chưa nhập username',
+                'email.required'=>'Bạn chưa nhập username',
                 'password.required'=>'Bạn chưa nhập password',
                 'password.min'=>'Password không được nhỏ hơn 3 ký tự',
                 'password.max'=>'Password không được dài quá 32 ký tự'
             ]);
-        if((Auth::Customer()->username == $request->username) && (Auth::Customer()->password == $request->password)){
-            return redirect('homepage'); // đưa người dùng vào tragn đăng nhập
+        $arr = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if(Auth::guard('customer')->attempt($arr)){
+            return redirect('shop/homepage'); // đưa người dùng vào tragn đăng nhập
         }else{
             return redirect('shop/login')->with('thongbao','Đăng nhập không thành công');
+        }
+    }
+    public function logout()
+    {
+        if(Auth::guard('customer')->check()){
+            Auth::guard('customer')->logout();
+            return redirect('shop/homepage');
+        }
+        else{
+            return redirect('shop/login');
         }
     }
     public function registration(){
@@ -120,7 +141,7 @@ class HomeController extends Controller
         $customers->email = $request->email;
         $customers->address = $request->address;
         $customers->phone_number = $request->phone;
-        
+
         $customers->save();
 
         return redirect('shop/registration')->with('thongbao','Chúc mừng bạn đã đăng ký  thành công');
@@ -129,11 +150,7 @@ class HomeController extends Controller
     public function tracking(){
         return view('homepage.tracking');
 
-        
 
-    }
-    public function Fillter(Request $request){
-        $product = Product::where(['category_id'=>$request->category,'brand_id'=>$request->brand])->get();
-        return $product;
+
     }
 }

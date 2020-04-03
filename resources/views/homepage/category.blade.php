@@ -10,7 +10,7 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>{{$category->name}}</h2>
+                    <h2>ten</h2>
                     <div class="page_link">
                         <a href="index.html">Home</a>
                         <a href="category.html">Category</a>
@@ -28,12 +28,7 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            
-                            <select class="show">
-                                <option value="1">Show 12</option>
-                                <option value="2">Show 14</option>
-                                <option value="4">Show 16</option>
-                            </select>
+                            <!-- count ten-->
                         </div>
                         <div class="right_page ml-auto">
                             <div class="row">{{$sp_theoloai->links()}}</div>
@@ -45,7 +40,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
-                                    <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
+                                    <img height="262" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a href="#"><i class="lnr lnr-heart"></i></a>
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
