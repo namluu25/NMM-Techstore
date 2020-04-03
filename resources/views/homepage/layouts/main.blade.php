@@ -50,6 +50,7 @@
     <script src="{{asset('homepage/vendors/counter-up/jquery.counterup.js')}}"></script>
 
     <script src="{{asset('homepage/js/theme.js')}}"></script>
+
 </body>
 
 </html>
