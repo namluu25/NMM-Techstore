@@ -10,11 +10,11 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>{{$loai_sp->name}}</h2>
+                    <h2>ten</h2>
                     <div class="page_link">
                         <a href="index.html">Home</a>
                         <a href="category.html">Category</a>
-                        <a href="category.html">{{$loai_sp->name}}</a>
+                        <a href="category.html">Women Fashion</a>
                     </div>
                 </div>
             </div>
@@ -28,10 +28,11 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            <font size="4">Hiển thị {{count($sp_theoloai)}} sản phẩm</font>
+                            <!-- count ten-->
                         </div>
                         <div class="right_page ml-auto">
                             <div class="row">{{$sp_theoloai->links()}}</div>
+                            
                         </div>
                     </div>
                     <div class="latest_product_inner row">
@@ -53,18 +54,14 @@
                                 @endif
                             </div>
                         </div>
-                    @endforeach
-<<<<<<< HEAD
-=======
+                    @endforeach    
                     </div>
->>>>>>> cb984cebda61571bba035293ace513719dad00e7
                 </div>
-            </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Loại sản phẩm</h3>
+                                <h3>Category</h3>
                             </div>
                             @foreach($category as $item)
                                 <div class="widgets_inner">
@@ -72,27 +69,22 @@
                                         <li><a href="{{route('categorys',$item->id)}}">{{$item->name}}</a></li>
                                     </ul>
                                 </div>
-                            @endforeach
+                            @endforeach    
                         </aside>
-                        <aside class="left_widgets cat_widgets">
+                        <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
-                                <h3>Hãng</h3>
+                                <h3>Brands</h3>
                             </div>
                              @foreach($brand as $item)
                             <div class="widgets_inner">
-<<<<<<< HEAD
                                 <ul class="list">   
-                                    <li><a href="{{route('brands',$item->id)}}">{{$item->name}}</a></li>    
+                                    <li><a href="{{route('categorys',$item->id)}}">{{$item->name}}</a></li>    
                                 </ul>            
-=======
-                                <ul class="list">
-                                    <li><a href="{{route('brands',$item->id)}}">{{$item->name}}</a></li>
-                                </ul>
->>>>>>> cb984cebda61571bba035293ace513719dad00e7
                             </div>
                             @endforeach
                         </aside>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -124,11 +116,11 @@
                     </div>
                     
                 </div>
-            @endforeach
+            @endforeach 
             <div class="center_page ml-auto">
-                <div class="row">{{$sp_khac->links()}}</div>
-            </div>
-         </div>
+                <div class="row">{{$sp_khac->links()}}</div>  
+            </div>  
+         </div>         
         </div>
     </section>
     <!--================End Most Product Area =================-->

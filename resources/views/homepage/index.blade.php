@@ -1,3 +1,4 @@
+
 @extends('homepage.layouts.main')
 @section('content')
 
@@ -8,11 +9,7 @@
                 <div class="banner_content row">
                     <div class="col-lg-6">
                         <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
-<<<<<<< HEAD
-                        <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
-=======
-                         <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
->>>>>>> cb984cebda61571bba035293ace513719dad00e7
+                        <a class="white_bg_btn btn-lg" href="/se03/public/shop/category">Bắt đầu khám phá</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
@@ -36,7 +33,7 @@
                             <div class="product_text">
                                 <h4 style="color:#1f1f1f">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Samsung -->
-                                <a href="{{asset('shop/brand/2')}}" style="color:#1f1f1f"><b>Shopping</b></a>
+                                <a href="#" style="color:#1f1f1f"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +43,7 @@
                             <div class="product_text">
                                 <h4 style="color:#ffffff">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Apple -->
-                                <a href="{{asset('shop/brand/1')}}" style="color:#ffffff"><b>Shopping</b></a>
+                                <a href="#" style="color:#ffffff"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -64,29 +61,19 @@
                 </div>
                 <div class="clients_slider owl-carousel">
                     <div class="item">
-                        <a href="{{asset('shop/brand/1')}}">
-                            <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
-                        </a>
+                        <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
                     </div>
                     <div class="item">
-                        <a href="{{asset('shop/brand/5')}}">
-                            <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
-                        </a>
+                        <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
                     </div>
                     <div class="item">
-                        <a href="{{asset('shop/brand/2')}}">
-                            <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
-                        </a>
+                        <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
                     </div>
                     <div class="item">
-                        <a href="{{asset('shop/brand/3')}}">
-                            <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
-                        </a>
+                        <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
                     </div>
                     <div class="item">
-                        <a href="{{asset('shop/brand/7')}}">
-                            <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
-                        </a>
+                        <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -108,8 +95,8 @@
                                 <div class="f_p_img">
                                     <img height="262" src="/se03/public/{{$featureItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
+                                        <a style="cursor: pointer" class="wish-list" productid="{{$featureItem->id}}"><i class="lnr lnr-heart"></i></a>
+                                        <a style="cursor: pointer" class="add-to-cart" productid="{{$featureItem->id}}"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
                                 <a href="/se03/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
@@ -118,7 +105,7 @@
                                 @else
                                     <h5 style="color: red">{{$featureItem->unit_price}}đ</h5>
                                 @endif
-                                
+
                             </div>
                         </div>
                         @endforeach
@@ -233,7 +220,76 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="wishlist1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--================End Most Product Area =================-->
 
+@endsection
+@section('script')
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('.wish-list').click(function () {
+            var productid = jQuery(this).attr('productid');
+            var customerid = jQuery('#id_customer').attr('id_customer');
+            if(customerid==-1){
+                console.log('chua dang nhap')
+            }
+            else{
+                jQuery.ajax({
+                    url:'addwishlist',
+                    headers: {
+                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                    },
+                    method : 'post',
+                    data:{
+                        id_product : productid,
+                        id_customer :customerid
+                    }
+                }).done(function (data) {
+                    alert("Đã thêm sản phẩm vào yêu thích.")
+                })
+            }
+        });
+        jQuery('.add-to-cart').click(function () {
+            var productid = jQuery(this).attr('productid');
+            var customerid = jQuery('#id_customer').attr('id_customer');
+            if(customerid==-1){
+                console.log('chua dang nhap')
+            }
+            else{
+                jQuery.ajax({
+                    url:'addtocart',
+                    headers: {
+                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                    },
+                    method : 'post',
+                    data:{
+                        id_product : productid,
+                        id_customer :customerid
+                    }
+                }).done(function (data) {
+                    alert("Đã thêm sản phẩm vào giỏ hàng.")
+                })
+            }
+        })
+    })
+</script>
 @endsection
