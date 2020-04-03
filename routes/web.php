@@ -78,7 +78,5 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('tracking','HomeController@tracking');
 
 });
-//seach
-Route::get('/search/name', 'SearchController@searchByName');
-Route::get('/search/category', 'SearchController@searchByCategory');
+
 
