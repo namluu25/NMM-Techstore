@@ -54,13 +54,17 @@
                             </div>
                         </div>
                     @endforeach
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> cb984cebda61571bba035293ace513719dad00e7
                 </div>
             </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Category</h3>
+                                <h3>Loại sản phẩm</h3>
                             </div>
                             @foreach($category as $item)
                                 <div class="widgets_inner">
@@ -68,17 +72,23 @@
                                         <li><a href="{{route('categorys',$item->id)}}">{{$item->name}}</a></li>
                                     </ul>
                                 </div>
-                            @endforeach    
+                            @endforeach
                         </aside>
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Brands</h3>
+                                <h3>Hãng</h3>
                             </div>
                              @foreach($brand as $item)
                             <div class="widgets_inner">
+<<<<<<< HEAD
                                 <ul class="list">   
                                     <li><a href="{{route('brands',$item->id)}}">{{$item->name}}</a></li>    
                                 </ul>            
+=======
+                                <ul class="list">
+                                    <li><a href="{{route('brands',$item->id)}}">{{$item->name}}</a></li>
+                                </ul>
+>>>>>>> cb984cebda61571bba035293ace513719dad00e7
                             </div>
                             @endforeach
                         </aside>
@@ -114,11 +124,11 @@
                     </div>
                     
                 </div>
-            @endforeach 
+            @endforeach
             <div class="center_page ml-auto">
-                <div class="row">{{$sp_khac->links()}}</div>  
-            </div>  
-         </div>         
+                <div class="row">{{$sp_khac->links()}}</div>
+            </div>
+         </div>
         </div>
     </section>
     <!--================End Most Product Area =================-->

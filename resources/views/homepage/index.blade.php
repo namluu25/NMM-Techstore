@@ -1,4 +1,3 @@
-
 @extends('homepage.layouts.main')
 @section('content')
 
@@ -9,7 +8,11 @@
                 <div class="banner_content row">
                     <div class="col-lg-6">
                         <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
+<<<<<<< HEAD
                         <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
+=======
+                         <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
+>>>>>>> cb984cebda61571bba035293ace513719dad00e7
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
@@ -155,7 +158,7 @@
                             </div>
                         </div>
                     @endforeach
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
