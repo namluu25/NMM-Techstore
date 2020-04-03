@@ -6,7 +6,19 @@
                 <a href="mailto:support@colorlib.com">support@abc.com</a>
                 <a href="#">Welcome to Shop</a>
             </div>
-            <div class="float-right">
+            <div class="float-right d-flex">
+                @if(Auth::guard('customer')->check())
+                    <div class="dropdown" >
+                        <a style="color: #5f3985; font-weight: 600; cursor: pointer"class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome,  {{Auth::guard('customer')->user()->name}}</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item" ><a class="nav-link" style="color: #5f3985;"href="logout">Logout</a></li>
+
+                        </ul>
+                    </div>
+                @else
+                    <a href="login" style="line-height: 36px; color: #5f3985; font-weight: 600" class="mr-4">Login</a>
+                    <a href="registration" style="line-height: 36px;color: #5f3985; font-weight: 600">Register</a>
+                @endif
                 <ul class="header_social">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -16,11 +28,11 @@
             </div>
         </div>
     </div>
-    <div class="main_menu">
+    <div class="main_menu" style="font-weight: 600">
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html"><img src="{{asset('homepage/img/logo.png')}}" alt=""></a>
+                <a class="navbar-brand logo_h" href="homepage"><img src="{{asset('homepage/img/logo.png')}}" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

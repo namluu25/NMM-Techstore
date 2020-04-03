@@ -71,5 +71,3 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('tracking','HomeController@tracking');
     Route::get('fillter','HomeController@Fillter');
 });
-
-
