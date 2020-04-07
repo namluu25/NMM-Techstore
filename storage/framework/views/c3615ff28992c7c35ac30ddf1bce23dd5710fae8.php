@@ -38,6 +38,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
+                                <a href="/nmm/public/shop/product/<?php echo e($item->id); ?>"></a>
                                     <img height="262" src="/nmm/public/<?php echo e($item->images[0]->image_path); ?>" alt="">
                                     <div class="p_icon">
                                         <a style="cursor: pointer" class="wish-list" productid="<?php echo e($item->id); ?>"><i class="lnr lnr-heart"></i></a>

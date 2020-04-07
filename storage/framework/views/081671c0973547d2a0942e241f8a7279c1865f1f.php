@@ -7,7 +7,7 @@
                 <div class="banner_content row">
                     <div class="col-lg-6">
                         <h3 style="color:#000000">Chào mừng đến với<br /><b><i>NMM Techstore</i></b> !</h3>
-                        <a class="white_bg_btn btn-lg" href="<?php echo e(asset('shop/category/1')); ?>">Bắt đầu khám phá</a>
+                        <a class="white_bg_btn btn-lg" href="<?php echo e(asset('shop/category/1')); ?>">Khám phá</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
