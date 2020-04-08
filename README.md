@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="150px" src="https://raw.githubusercontent.com/namluu25/NMM-Techstore/master/logo.png">
+</p>
+
 # NMM Techstore
 
 ## Introduction, Objectives & Audiences
