@@ -1,0 +1,354 @@
+[2020-04-07 04:26:33] local.ERROR: Method Illuminate\Database\Eloquent\Collection::links does not exist. (View: /opt/lampp/htdocs/nmm/resources/views/admin/category/list.blade.php) {"userId":8,"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): Method Illuminate\\Database\\Eloquent\\Collection::links does not exist. (View: /opt/lampp/htdocs/nmm/resources/views/admin/category/list.blade.php) at /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Support/Traits/Macroable.php:103)
+[stacktrace]
+#0 /opt/lampp/htdocs/nmm/resources/views/admin/category/list.blade.php(35): Illuminate\\Support\\Collection->__call('links', Array)
+#1 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#3 /opt/lampp/htdocs/nmm/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(36): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#4 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(143): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(126): Illuminate\\View\\View->getContents()
+#6 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\\View\\View->renderContents()
+#7 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Http/Response.php(42): Illuminate\\View\\View->render()
+#8 /opt/lampp/htdocs/nmm/vendor/symfony/http-foundation/Response.php(202): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#9 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View))
+#10 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(720): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#12 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /opt/lampp/htdocs/nmm/app/Http/Middleware/CheckLoginAdmin.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\CheckLoginAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /opt/lampp/htdocs/nmm/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 /opt/lampp/htdocs/nmm/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+
+[previous exception] [object] (BadMethodCallException(code: 0): Method Illuminate\\Database\\Eloquent\\Collection::links does not exist. at /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Support/Traits/Macroable.php:103)
+[stacktrace]
+#0 /opt/lampp/htdocs/nmm/storage/framework/views/e1e18a242d7d781a643a936e632a66331c6731dd.php(35): Illuminate\\Support\\Collection->__call('links', Array)
+#1 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(43): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('/opt/lampp/htdo...', Array)
+#3 /opt/lampp/htdocs/nmm/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(36): Illuminate\\View\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#4 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(143): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('/opt/lampp/htdo...', Array)
+#5 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(126): Illuminate\\View\\View->getContents()
+#6 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/View.php(91): Illuminate\\View\\View->renderContents()
+#7 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Http/Response.php(42): Illuminate\\View\\View->render()
+#8 /opt/lampp/htdocs/nmm/vendor/symfony/http-foundation/Response.php(202): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#9 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Symfony\\Component\\HttpFoundation\\Response->__construct(Object(Illuminate\\View\\View))
+#10 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(720): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#11 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#12 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#13 /opt/lampp/htdocs/nmm/app/Http/Middleware/CheckLoginAdmin.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\CheckLoginAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /opt/lampp/htdocs/nmm/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 /opt/lampp/htdocs/nmm/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 {main}
+"} 
+[2020-04-07 05:23:06] local.ERROR: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'unit_price' at row 1 (SQL: update `products` set `detail` = <h2>Đặc điểm nổi bật của <a href="https://cellphones.com.vn/iphone-7-plus-32-gb-cty-vn.html" target="_blank">iPhone 7 Plus 32GB</a></h2>
+
+<p><em>Ra mắt v&agrave;o năm 2016, <a href="https://cellphones.com.vn/mobile/apple/iphone-7-7-plus.html" target="_blank">iPhone 7 Plus</a> l&agrave; một trong những d&ograve;ng flagship ấn tượng của Apple. T&iacute;nh đến hiện tại, <strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A </strong>vẫn l&agrave; một sự lựa chọn đ&aacute;ng gi&aacute; cho người d&ugrave;ng đang t&igrave;m kiếm một sản phẩm chất lượng, đẳng cấp v&agrave; c&oacute; mức gi&aacute; b&aacute;n ph&ugrave; hợp</em></p>
+
+<h3><strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A l&agrave; g&igrave;?&nbsp;<strong>V&igrave; sao n&ecirc;n mua iPhone ch&iacute;nh h&atilde;ng VN/A?</strong></strong></h3>
+
+<p><a href="https://cellphones.com.vn/mobile/apple.html" target="_blank">iPhone ch&iacute;nh h&atilde;ng VN/A</a> tại CellphoneS l&agrave; c&aacute;c sản phẩm iPhone được Apple sản xuất ri&ecirc;ng cho thị trường Việt Nam v&agrave; ph&acirc;n phối trực tiếp cho những c&ocirc;ng ty đối t&aacute;c tại Việt Nam. Khi mua iPhone ch&iacute;nh h&atilde;ng VN/A, bạn sẽ c&oacute; được những quyền lợi v&agrave; hỗ trợ m&agrave; c&aacute;c d&ograve;ng iPhone x&aacute;ch tay, iPhone cũ kh&ocirc;ng c&oacute;. Những ti&ecirc;u chuẩn về chất lượng sản phẩm cũng như c&aacute;c quyền lợi về bảo h&agrave;nh sản phẩm l&agrave; điều m&agrave; bạn sẽ được trải nghiệm r&otilde; r&agrave;ng nhất khi mua iPhone ch&iacute;nh h&atilde;ng VN/A.</p>
+
+<p><img alt="Vì sao nên mua iPhone chính hãng VN/A?" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-1_1.jpg" /></p>
+
+<p>- Thứ nhất, sản phẩm bạn mua sẽ được đảm bảo đ&uacute;ng c&aacute;c ti&ecirc;u chuẩn về chất lượng v&agrave; an to&agrave;n của Apple v&igrave; c&aacute;c sản phẩm iPhone ch&iacute;nh h&atilde;ng VN/A đều phải l&agrave; h&agrave;ng mới 100%, nguy&ecirc;n seal v&agrave; chưa active. C&aacute;c sản phẩm h&agrave;ng x&aacute;ch tay b&ecirc;n ngo&agrave;i thị trường c&oacute; thể c&oacute; gi&aacute; rẻ hơn nhưng vấn đề chất lượng sẽ kh&ocirc;ng được đảm bảo, tạo cảm gi&aacute;c kh&ocirc;ng y&ecirc;n t&acirc;m khi mua h&agrave;ng.</p>
+
+<p>- Thứ hai, ch&iacute;nh s&aacute;ch bảo h&agrave;nh d&agrave;nh cho c&aacute;c m&aacute;y iPhone ch&iacute;nh h&atilde;ng VN/A rất tốt v&agrave; to&agrave;n diện theo đ&uacute;ng ti&ecirc;u chuẩn của Apple. Khi mua iPhone ch&iacute;nh h&atilde;ng VN/A tại CellphoneS, bạn sẽ được đổi trả m&aacute;y ho&agrave;n to&agrave;n miễn ph&iacute; trong 30 ng&agrave;y đầu nếu c&oacute; lỗi kỹ thuật từ nh&agrave; sản xuất. B&ecirc;n cạnh đ&oacute;, Apple cũng đảm bảo cho bạn quyền lợi được đổi m&aacute;y, đổi bảo h&agrave;nh hoặc sửa chữa trong v&ograve;ng 12 th&aacute;ng tại c&aacute;c trung t&acirc;m bảo h&agrave;nh ủy quyền của Apple.</p>
+
+<p>Trong khi đ&oacute;, tr&ecirc;n thị trường c&ograve;n c&oacute; c&aacute;c d&ograve;ng m&aacute;y iPhone nhập khẩu ch&iacute;nh h&atilde;ng v&agrave; nhập khẩu mới, đ&acirc;y l&agrave; những sản phẩm iPhone được sản xuất cho c&aacute;c thị trường nước ngo&agrave;i, được c&aacute;c c&ocirc;ng ty trong nước nhập khẩu về hoặc do c&aacute;c c&aacute; nh&acirc;n kh&ocirc;ng c&oacute; nhu cầu b&aacute;n lại cho c&aacute;c đại l&yacute; b&aacute;n lẻ theo số lượng &iacute;t.&nbsp;C&aacute;c d&ograve;ng sản phẩm n&agrave;y c&oacute; ch&iacute;nh s&aacute;ch bảo h&agrave;nh với &iacute;t quyền lợi hơn so với h&agrave;ng ch&iacute;nh h&atilde;ng VN/A. V&iacute; dụ, iPhone nhập khẩu ch&iacute;nh h&atilde;ng mặc d&ugrave; vẫn c&oacute; thời hạn đổi m&aacute;y mới trong 30 ng&agrave;y, nhưng việc đổi m&aacute;y, đổi bảo h&agrave;nh được thực hiện tại hệ thống b&aacute;n lẻ. Ngo&agrave;i ra, c&aacute;c sản phẩm nhập khẩu mới chỉ được đổi m&aacute;y mới sau khi mua trong v&ograve;ng 15 ng&agrave;y.</p>
+
+<h3><strong>iPhone 7 Plus 32GB sở hữu thiết kế tinh tế, sang trọng với khung kim loại nguy&ecirc;n khối</strong></h3>
+
+<p><strong>iPhone 7 Plus 32GB&nbsp;</strong>c&oacute; k&iacute;ch thước 158.2 x 77.9 x 7.3 (mm) được Apple giữ lại gần như nguy&ecirc;n vẹn ng&ocirc;n ngữ thiết kế từ bộ đ&ocirc;i <a href="https://cellphones.com.vn/mobile/apple/iphone-6s-6s-plus.html" target="_blank">iPhone 6s/6s Plus</a> với vỏ kim loại nguy&ecirc;n khối tinh tế, mỏng nhẹ nhưng cũng rất chắc chắn. Tuy nhi&ecirc;n, phần dải an-ten bắt s&oacute;ng thay v&igrave; được đặt ngang mặt lưng như người tiền nhiệm th&igrave; nay đ&atilde; được chuyển sang phần cạnh tr&ecirc;n của sản phẩm.</p>
+
+<p><img alt="iPhone 7 Plus 32GB chính hãng VN/A" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-2.jpg" /></p>
+
+<p>C&ugrave;ng với đ&oacute;, ph&iacute;m Home vật l&yacute; quen thuộc cũng đ&atilde; được Apple mạnh tay thay thế bằng ph&iacute;m cảm ứng dựa tr&ecirc;n nền tảng c&ocirc;ng nghệ <a href="https://appleinsider.com/articles/16/09/27/inside-the-iphone-7-apples-taptic-engine-explained" target="_blank">Taptic Engine</a> mới. Ph&iacute;m Home mới c&ograve;n được li&ecirc;n kết với 3D touch, tạo n&ecirc;n sự tiện lợi tối ưu cho người d&ugrave;ng.</p>
+
+<h3><strong>M&agrave;n h&igrave;nh Retina 5.5 inches sở hữu dải m&agrave;u rộng t&iacute;ch hợp 3D touch</strong></h3>
+
+<p>M&agrave;n h&igrave;nh Retina tr&ecirc;n <strong>iPhone 7 Plus 32GB&nbsp;</strong>sở hữu k&iacute;ch thước 5.5 inches c&oacute; độ ph&acirc;n giải 1080 x 1920 pixels với dải m&agrave;u hiển thị kh&aacute; rộng mang đến cho người d&ugrave;ng trải nghiệm m&agrave;u sắc ch&acirc;n thực v&agrave; sinh động.</p>
+
+<p><img alt="Màn hình Retina 5.5 inches sở hữu dải màu rộng tích hợp 3D touch" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-3_1.jpg" /></p>
+
+<p>Tr&ecirc;n chiếc điện thoại con cưng của m&igrave;nh, Apple c&ograve;n t&iacute;ch hợp th&ecirc;m c&ocirc;ng nghệ 3D touch v&agrave;o m&agrave;n h&igrave;nh gi&uacute;p m&aacute;y c&oacute; khả năng vận h&agrave;nh v&agrave; t&ugrave;y chỉnh nhanh ch&oacute;ng hơn khi nhận được c&aacute;c tương t&aacute;c từ bạn.</p>
+
+<h3><strong>Cấu h&igrave;nh mạnh mẽ v&agrave; hiệu năng vượt trội với chip Apple A10</strong></h3>
+
+<p>D&ugrave; kh&ocirc;ng qu&aacute; nổi bật trong thời điểm hiện tại, nhưng so với c&aacute;c đối thủ cạnh tranh c&ugrave;ng ph&acirc;n kh&uacute;c, <strong>iPhone 7 Plus 32GB&nbsp;</strong>vẫn xứng đ&aacute;ng l&agrave; một đối thủ đ&aacute;ng gờm về mặt cấu h&igrave;nh v&agrave; hiệu năng khi đ&atilde; được Apple trang bị con chip A10 Fusion c&oacute; hiệu suất cao cũng như khả năng tiết kiệm điện tối ưu.</p>
+
+<p><img alt="iPhone 7 Plus 32GB chính hãng VN/A 4" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-5.jpg" /></p>
+
+<p>Hệ điều h&agrave;nh iOS được t&iacute;ch hợp sẵn tr&ecirc;n iPhone 7 Plus vốn l&agrave; một trong những điểm nhấn quan trọng tạo n&ecirc;n thương hiệu v&agrave; sự hấp dẫn của c&aacute;c d&ograve;ng điện thoại iPhone của Apple với người ti&ecirc;u d&ugrave;ng. Mặc d&ugrave; chỉ c&oacute; 3GB RAM, nhưng với sự tối ưu h&oacute;a tuyệt vời từ iOS, <strong>iPhone 7 Plus 32GB</strong>&nbsp;tiếp tục khẳng định thương hiệu điện thoại vận h&agrave;nh mượt m&agrave;, xử l&yacute; đa nhiệm hiệu quả, nhanh ch&oacute;ng m&agrave; Apple đ&atilde; tạo dựng, gi&uacute;p bạn c&oacute; thể &ldquo;chiến&rdquo; mọi tựa game y&ecirc;u th&iacute;ch như: <a href="https://www.androidauthority.com/pubg-mobile-review-853582/" target="_blank">PUPG</a>, <a href="https://www.ign.com/articles/2013/09/26/asphalt-8-airborne-review" target="_blank">Alphast 8</a>, Li&ecirc;n qu&acirc;n,&hellip; V&agrave; tất nhi&ecirc;n, bạn cũng c&oacute; thể thoải m&aacute;i lướt web, xem phim tr&ecirc;n Youtube cả ng&agrave;y m&agrave; vẫn đảm bảo được trải nghiệm sử dụng mượt m&agrave; tuyệt vời.</p>
+
+<h3><strong>Dung lượng bộ nhớ trong 32GB vừa đủ d&ugrave;ng c&ugrave;ng vi&ecirc;n pin 2900 mAh mạnh mẽ</strong></h3>
+
+<p><strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A</strong> được trang bị bộ nhớ trong 32GB đảm bảo khả năng lưu trữ hiệu quả cho người d&ugrave;ng c&oacute; nhu cầu th&ocirc;ng thường. Bạn c&oacute; thể thoải m&aacute;i chụp ảnh, quay phim hoặc lưu trữ c&aacute;c t&agrave;i liệu c&aacute; nh&acirc;n trong một thời gian d&agrave;i.&nbsp;Tuy nhi&ecirc;n, nếu l&agrave; một người c&oacute; nhu cầu l&agrave;m việc v&agrave; y&ecirc;u cầu chiếc điện thoại của m&igrave;nh phải c&oacute; khả năng lưu trữ cao, bạn c&oacute; thể tham khảo th&ecirc;m phi&ecirc;n bản <a href="https://cellphones.com.vn/iphone-7-plus-128-gb-cty-vn.html" target="_blank">iPhone 7 Plus 128Gb</a></p>
+
+<p><img alt="Dung lượng bộ nhớ trong 32GB vừa đủ dùng cùng viên pin 2900 mAh mạnh mẽ" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-6_1.jpg" /></p>
+
+<p>So với người tiền nhiệm l&agrave; iPhone 6s Plus, vi&ecirc;n pin của iPhone 7 Plus kh&ocirc;ng c&oacute; sự thay đổi qu&aacute; nhiều về chất lượng. iPhone 7 Plus sử dụng vi&ecirc;n pin 2900mAh, một vi&ecirc;n pin c&oacute; th&ocirc;ng số c&oacute; vẻ kh&aacute; thấp tại thời điểm hiện tại nhưng nhờ sự ổn định từ iOS n&ecirc;n thời lượng sử dụng của pin sẽ l&acirc;u hơn nhiều so với l&yacute; thuyết. Nếu sử dụng ở mức độ b&igrave;nh thường, bạn vẫn c&oacute; thể tự tin d&ugrave;ng iPhone 7 Plus trong cả một ng&agrave;y.</p>
+
+<h3>Camera k&eacute;p 12 MP đầu ti&ecirc;n của Apple cho khả năng chụp ảnh ấn tượng</h3>
+
+<p>iPhone 7 Plus l&agrave; d&ograve;ng sản phẩm đầu ti&ecirc;n được Apple trang bị hệ thống camera k&eacute;p thời thượng v&agrave; chất lượng. Bộ đ&ocirc;i camera sau của iPhone 7 Plus c&oacute; c&ugrave;ng độ ph&acirc;n giải l&agrave; 12MP, khẩu độ f1.8 với một camera thường v&agrave; 1 camera chụp ảnh g&oacute;c rộng gi&uacute;p người d&ugrave;ng c&oacute; những bức ảnh lung linh, bao qu&aacute;t hơn hẳn.</p>
+
+<p><img alt="iPhone 7 Plus 32GB chính hãng VN/A 6" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-7.jpg" /></p>
+
+<p>C&ugrave;ng với đ&oacute;, nhờ hệ thống Dual-camera v&agrave; c&ocirc;ng ngh&ecirc; ISP, chỉ cần một c&uacute; chạm tay bạn c&oacute; thể chuyển đổi nhanh ch&oacute;ng giữa chế độ 1x v&agrave; zoom 2x quang học. Đồng thời, bạn c&ograve;n được trải nghiệm khả năng chụp ảnh với tốc độ l&ecirc;n đến 10x v&agrave; 6x khi quay video.</p>
+
+<p><img alt="Camera kép mang đến những bức ảnh ấn tượng" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-7_1.jpg" /></p>
+
+<p>Nếu bạn ưa th&iacute;ch chụp ảnh selfie, camera trước với độ ph&acirc;n giải 7MB c&ugrave;ng c&ocirc;ng nghệ <a href="https://appleinsider.com/articles/15/09/10/how-apples-new-retina-flash----5-years-in-the-making----brightens-up-selfies-on-the-iphone-6s" target="_blank">Retina flash </a>sẽ mang đến cho bạn những bức ảnh ch&acirc;n dung tự nhi&ecirc;n v&agrave; xinh đẹp.</p>
+
+<h3>Đạt ti&ecirc;u chuẩn chống nước IP 67 c&ugrave;ng&nbsp;<strong>loa stereo k&eacute;p cho &acirc;m thanh sống động</strong></h3>
+
+<p><em>iPhone 7 Plus 32GB VN/A</em> được thiết kế c&oacute; khả năng chịu được nước v&agrave; bụi. Với ti&ecirc;u chuẩn chống nước IP67, điện thoại của bạn c&oacute; thể an to&agrave;n dưới nước ở độ s&acirc;u 1m trong khoảng thời gian 30 ph&uacute;t m&agrave; kh&ocirc;ng bị ảnh hưởng hay hư hỏng. Bạn sẽ y&ecirc;n t&acirc;m sử dụng điện thoại khi trời mưa m&agrave; kh&ocirc;ng sợ hỏng h&oacute;c. Kh&ocirc;ng sợ hư hỏng khi lỡ tay l&agrave;m đổ nước l&ecirc;n điện thoại của bạn. Khả năng chống bụi cũng tuyệt vời kh&ocirc;ng k&eacute;m, sản phẩm được gia c&ocirc;ng mịn m&agrave;ng kh&ocirc;ng b&aacute;m bụi v&agrave; hạn chế b&aacute;m d&iacute;nh mồi h&ocirc;i v&acirc;n tay.</p>
+
+<p><img alt="iPhone 7 Plus 32GB Chính hãng 8" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-10.jpg" /></p>
+
+<p>Trong phi&ecirc;n bản <strong>iPhone 7 Plus 32GB</strong>, Apple đ&atilde; ch&iacute;nh thức loại bỏ jack cắm tai nghe 3.5 (mm) v&agrave; thay v&agrave;o đ&oacute; l&agrave; hệ thống loa k&eacute;p stereo gi&uacute;p &acirc;m thanh được truyền tải một c&aacute;ch sống động, chi tiết hơn gấp 2 lần so với c&aacute;c thế hệ cũ.</p>
+
+<p><img alt="iPhone 7 Plus 32GB Chính hãng 9" src="https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-11.jpg" /></p>
+
+<p>Tuy nhi&ecirc;n, việc loại bỏ jack tai nghe 3.5 (mm) lại mang đến một v&agrave;i bất tiện kh&ocirc;ng mong muốn cho người d&ugrave;ng như việc phải sử dụng c&aacute;p chuyển đổi giữa jack 3.5 (mm) với cổng <a href="https://www.howtogeek.com/211843/usb-type-c-explained-what-it-is-and-why-youll-want-it/" target="_blank">USB Type-C</a>.&nbsp;</p>, `unit_price` = 12.000.000, `promotion_price` = 11.400.000, `products`.`updated_at` = 2020-04-07 05:23:06 where `id` = 1) {"userId":8,"exception":"[object] (Illuminate\\Database\\QueryException(code: 01000): SQLSTATE[01000]: Warning: 1265 Data truncated for column 'unit_price' at row 1 (SQL: update `products` set `detail` = <h2>Đặc điểm nổi bật của <a href=\"https://cellphones.com.vn/iphone-7-plus-32-gb-cty-vn.html\" target=\"_blank\">iPhone 7 Plus 32GB</a></h2>
+
+<p><em>Ra mắt v&agrave;o năm 2016, <a href=\"https://cellphones.com.vn/mobile/apple/iphone-7-7-plus.html\" target=\"_blank\">iPhone 7 Plus</a> l&agrave; một trong những d&ograve;ng flagship ấn tượng của Apple. T&iacute;nh đến hiện tại, <strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A </strong>vẫn l&agrave; một sự lựa chọn đ&aacute;ng gi&aacute; cho người d&ugrave;ng đang t&igrave;m kiếm một sản phẩm chất lượng, đẳng cấp v&agrave; c&oacute; mức gi&aacute; b&aacute;n ph&ugrave; hợp</em></p>
+
+<h3><strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A l&agrave; g&igrave;?&nbsp;<strong>V&igrave; sao n&ecirc;n mua iPhone ch&iacute;nh h&atilde;ng VN/A?</strong></strong></h3>
+
+<p><a href=\"https://cellphones.com.vn/mobile/apple.html\" target=\"_blank\">iPhone ch&iacute;nh h&atilde;ng VN/A</a> tại CellphoneS l&agrave; c&aacute;c sản phẩm iPhone được Apple sản xuất ri&ecirc;ng cho thị trường Việt Nam v&agrave; ph&acirc;n phối trực tiếp cho những c&ocirc;ng ty đối t&aacute;c tại Việt Nam. Khi mua iPhone ch&iacute;nh h&atilde;ng VN/A, bạn sẽ c&oacute; được những quyền lợi v&agrave; hỗ trợ m&agrave; c&aacute;c d&ograve;ng iPhone x&aacute;ch tay, iPhone cũ kh&ocirc;ng c&oacute;. Những ti&ecirc;u chuẩn về chất lượng sản phẩm cũng như c&aacute;c quyền lợi về bảo h&agrave;nh sản phẩm l&agrave; điều m&agrave; bạn sẽ được trải nghiệm r&otilde; r&agrave;ng nhất khi mua iPhone ch&iacute;nh h&atilde;ng VN/A.</p>
+
+<p><img alt=\"Vì sao nên mua iPhone chính hãng VN/A?\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-1_1.jpg\" /></p>
+
+<p>- Thứ nhất, sản phẩm bạn mua sẽ được đảm bảo đ&uacute;ng c&aacute;c ti&ecirc;u chuẩn về chất lượng v&agrave; an to&agrave;n của Apple v&igrave; c&aacute;c sản phẩm iPhone ch&iacute;nh h&atilde;ng VN/A đều phải l&agrave; h&agrave;ng mới 100%, nguy&ecirc;n seal v&agrave; chưa active. C&aacute;c sản phẩm h&agrave;ng x&aacute;ch tay b&ecirc;n ngo&agrave;i thị trường c&oacute; thể c&oacute; gi&aacute; rẻ hơn nhưng vấn đề chất lượng sẽ kh&ocirc;ng được đảm bảo, tạo cảm gi&aacute;c kh&ocirc;ng y&ecirc;n t&acirc;m khi mua h&agrave;ng.</p>
+
+<p>- Thứ hai, ch&iacute;nh s&aacute;ch bảo h&agrave;nh d&agrave;nh cho c&aacute;c m&aacute;y iPhone ch&iacute;nh h&atilde;ng VN/A rất tốt v&agrave; to&agrave;n diện theo đ&uacute;ng ti&ecirc;u chuẩn của Apple. Khi mua iPhone ch&iacute;nh h&atilde;ng VN/A tại CellphoneS, bạn sẽ được đổi trả m&aacute;y ho&agrave;n to&agrave;n miễn ph&iacute; trong 30 ng&agrave;y đầu nếu c&oacute; lỗi kỹ thuật từ nh&agrave; sản xuất. B&ecirc;n cạnh đ&oacute;, Apple cũng đảm bảo cho bạn quyền lợi được đổi m&aacute;y, đổi bảo h&agrave;nh hoặc sửa chữa trong v&ograve;ng 12 th&aacute;ng tại c&aacute;c trung t&acirc;m bảo h&agrave;nh ủy quyền của Apple.</p>
+
+<p>Trong khi đ&oacute;, tr&ecirc;n thị trường c&ograve;n c&oacute; c&aacute;c d&ograve;ng m&aacute;y iPhone nhập khẩu ch&iacute;nh h&atilde;ng v&agrave; nhập khẩu mới, đ&acirc;y l&agrave; những sản phẩm iPhone được sản xuất cho c&aacute;c thị trường nước ngo&agrave;i, được c&aacute;c c&ocirc;ng ty trong nước nhập khẩu về hoặc do c&aacute;c c&aacute; nh&acirc;n kh&ocirc;ng c&oacute; nhu cầu b&aacute;n lại cho c&aacute;c đại l&yacute; b&aacute;n lẻ theo số lượng &iacute;t.&nbsp;C&aacute;c d&ograve;ng sản phẩm n&agrave;y c&oacute; ch&iacute;nh s&aacute;ch bảo h&agrave;nh với &iacute;t quyền lợi hơn so với h&agrave;ng ch&iacute;nh h&atilde;ng VN/A. V&iacute; dụ, iPhone nhập khẩu ch&iacute;nh h&atilde;ng mặc d&ugrave; vẫn c&oacute; thời hạn đổi m&aacute;y mới trong 30 ng&agrave;y, nhưng việc đổi m&aacute;y, đổi bảo h&agrave;nh được thực hiện tại hệ thống b&aacute;n lẻ. Ngo&agrave;i ra, c&aacute;c sản phẩm nhập khẩu mới chỉ được đổi m&aacute;y mới sau khi mua trong v&ograve;ng 15 ng&agrave;y.</p>
+
+<h3><strong>iPhone 7 Plus 32GB sở hữu thiết kế tinh tế, sang trọng với khung kim loại nguy&ecirc;n khối</strong></h3>
+
+<p><strong>iPhone 7 Plus 32GB&nbsp;</strong>c&oacute; k&iacute;ch thước 158.2 x 77.9 x 7.3 (mm) được Apple giữ lại gần như nguy&ecirc;n vẹn ng&ocirc;n ngữ thiết kế từ bộ đ&ocirc;i <a href=\"https://cellphones.com.vn/mobile/apple/iphone-6s-6s-plus.html\" target=\"_blank\">iPhone 6s/6s Plus</a> với vỏ kim loại nguy&ecirc;n khối tinh tế, mỏng nhẹ nhưng cũng rất chắc chắn. Tuy nhi&ecirc;n, phần dải an-ten bắt s&oacute;ng thay v&igrave; được đặt ngang mặt lưng như người tiền nhiệm th&igrave; nay đ&atilde; được chuyển sang phần cạnh tr&ecirc;n của sản phẩm.</p>
+
+<p><img alt=\"iPhone 7 Plus 32GB chính hãng VN/A\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-2.jpg\" /></p>
+
+<p>C&ugrave;ng với đ&oacute;, ph&iacute;m Home vật l&yacute; quen thuộc cũng đ&atilde; được Apple mạnh tay thay thế bằng ph&iacute;m cảm ứng dựa tr&ecirc;n nền tảng c&ocirc;ng nghệ <a href=\"https://appleinsider.com/articles/16/09/27/inside-the-iphone-7-apples-taptic-engine-explained\" target=\"_blank\">Taptic Engine</a> mới. Ph&iacute;m Home mới c&ograve;n được li&ecirc;n kết với 3D touch, tạo n&ecirc;n sự tiện lợi tối ưu cho người d&ugrave;ng.</p>
+
+<h3><strong>M&agrave;n h&igrave;nh Retina 5.5 inches sở hữu dải m&agrave;u rộng t&iacute;ch hợp 3D touch</strong></h3>
+
+<p>M&agrave;n h&igrave;nh Retina tr&ecirc;n <strong>iPhone 7 Plus 32GB&nbsp;</strong>sở hữu k&iacute;ch thước 5.5 inches c&oacute; độ ph&acirc;n giải 1080 x 1920 pixels với dải m&agrave;u hiển thị kh&aacute; rộng mang đến cho người d&ugrave;ng trải nghiệm m&agrave;u sắc ch&acirc;n thực v&agrave; sinh động.</p>
+
+<p><img alt=\"Màn hình Retina 5.5 inches sở hữu dải màu rộng tích hợp 3D touch\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-3_1.jpg\" /></p>
+
+<p>Tr&ecirc;n chiếc điện thoại con cưng của m&igrave;nh, Apple c&ograve;n t&iacute;ch hợp th&ecirc;m c&ocirc;ng nghệ 3D touch v&agrave;o m&agrave;n h&igrave;nh gi&uacute;p m&aacute;y c&oacute; khả năng vận h&agrave;nh v&agrave; t&ugrave;y chỉnh nhanh ch&oacute;ng hơn khi nhận được c&aacute;c tương t&aacute;c từ bạn.</p>
+
+<h3><strong>Cấu h&igrave;nh mạnh mẽ v&agrave; hiệu năng vượt trội với chip Apple A10</strong></h3>
+
+<p>D&ugrave; kh&ocirc;ng qu&aacute; nổi bật trong thời điểm hiện tại, nhưng so với c&aacute;c đối thủ cạnh tranh c&ugrave;ng ph&acirc;n kh&uacute;c, <strong>iPhone 7 Plus 32GB&nbsp;</strong>vẫn xứng đ&aacute;ng l&agrave; một đối thủ đ&aacute;ng gờm về mặt cấu h&igrave;nh v&agrave; hiệu năng khi đ&atilde; được Apple trang bị con chip A10 Fusion c&oacute; hiệu suất cao cũng như khả năng tiết kiệm điện tối ưu.</p>
+
+<p><img alt=\"iPhone 7 Plus 32GB chính hãng VN/A 4\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-5.jpg\" /></p>
+
+<p>Hệ điều h&agrave;nh iOS được t&iacute;ch hợp sẵn tr&ecirc;n iPhone 7 Plus vốn l&agrave; một trong những điểm nhấn quan trọng tạo n&ecirc;n thương hiệu v&agrave; sự hấp dẫn của c&aacute;c d&ograve;ng điện thoại iPhone của Apple với người ti&ecirc;u d&ugrave;ng. Mặc d&ugrave; chỉ c&oacute; 3GB RAM, nhưng với sự tối ưu h&oacute;a tuyệt vời từ iOS, <strong>iPhone 7 Plus 32GB</strong>&nbsp;tiếp tục khẳng định thương hiệu điện thoại vận h&agrave;nh mượt m&agrave;, xử l&yacute; đa nhiệm hiệu quả, nhanh ch&oacute;ng m&agrave; Apple đ&atilde; tạo dựng, gi&uacute;p bạn c&oacute; thể &ldquo;chiến&rdquo; mọi tựa game y&ecirc;u th&iacute;ch như: <a href=\"https://www.androidauthority.com/pubg-mobile-review-853582/\" target=\"_blank\">PUPG</a>, <a href=\"https://www.ign.com/articles/2013/09/26/asphalt-8-airborne-review\" target=\"_blank\">Alphast 8</a>, Li&ecirc;n qu&acirc;n,&hellip; V&agrave; tất nhi&ecirc;n, bạn cũng c&oacute; thể thoải m&aacute;i lướt web, xem phim tr&ecirc;n Youtube cả ng&agrave;y m&agrave; vẫn đảm bảo được trải nghiệm sử dụng mượt m&agrave; tuyệt vời.</p>
+
+<h3><strong>Dung lượng bộ nhớ trong 32GB vừa đủ d&ugrave;ng c&ugrave;ng vi&ecirc;n pin 2900 mAh mạnh mẽ</strong></h3>
+
+<p><strong>iPhone 7 Plus 32GB ch&iacute;nh h&atilde;ng VN/A</strong> được trang bị bộ nhớ trong 32GB đảm bảo khả năng lưu trữ hiệu quả cho người d&ugrave;ng c&oacute; nhu cầu th&ocirc;ng thường. Bạn c&oacute; thể thoải m&aacute;i chụp ảnh, quay phim hoặc lưu trữ c&aacute;c t&agrave;i liệu c&aacute; nh&acirc;n trong một thời gian d&agrave;i.&nbsp;Tuy nhi&ecirc;n, nếu l&agrave; một người c&oacute; nhu cầu l&agrave;m việc v&agrave; y&ecirc;u cầu chiếc điện thoại của m&igrave;nh phải c&oacute; khả năng lưu trữ cao, bạn c&oacute; thể tham khảo th&ecirc;m phi&ecirc;n bản <a href=\"https://cellphones.com.vn/iphone-7-plus-128-gb-cty-vn.html\" target=\"_blank\">iPhone 7 Plus 128Gb</a></p>
+
+<p><img alt=\"Dung lượng bộ nhớ trong 32GB vừa đủ dùng cùng viên pin 2900 mAh mạnh mẽ\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-6_1.jpg\" /></p>
+
+<p>So với người tiền nhiệm l&agrave; iPhone 6s Plus, vi&ecirc;n pin của iPhone 7 Plus kh&ocirc;ng c&oacute; sự thay đổi qu&aacute; nhiều về chất lượng. iPhone 7 Plus sử dụng vi&ecirc;n pin 2900mAh, một vi&ecirc;n pin c&oacute; th&ocirc;ng số c&oacute; vẻ kh&aacute; thấp tại thời điểm hiện tại nhưng nhờ sự ổn định từ iOS n&ecirc;n thời lượng sử dụng của pin sẽ l&acirc;u hơn nhiều so với l&yacute; thuyết. Nếu sử dụng ở mức độ b&igrave;nh thường, bạn vẫn c&oacute; thể tự tin d&ugrave;ng iPhone 7 Plus trong cả một ng&agrave;y.</p>
+
+<h3>Camera k&eacute;p 12 MP đầu ti&ecirc;n của Apple cho khả năng chụp ảnh ấn tượng</h3>
+
+<p>iPhone 7 Plus l&agrave; d&ograve;ng sản phẩm đầu ti&ecirc;n được Apple trang bị hệ thống camera k&eacute;p thời thượng v&agrave; chất lượng. Bộ đ&ocirc;i camera sau của iPhone 7 Plus c&oacute; c&ugrave;ng độ ph&acirc;n giải l&agrave; 12MP, khẩu độ f1.8 với một camera thường v&agrave; 1 camera chụp ảnh g&oacute;c rộng gi&uacute;p người d&ugrave;ng c&oacute; những bức ảnh lung linh, bao qu&aacute;t hơn hẳn.</p>
+
+<p><img alt=\"iPhone 7 Plus 32GB chính hãng VN/A 6\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-7.jpg\" /></p>
+
+<p>C&ugrave;ng với đ&oacute;, nhờ hệ thống Dual-camera v&agrave; c&ocirc;ng ngh&ecirc; ISP, chỉ cần một c&uacute; chạm tay bạn c&oacute; thể chuyển đổi nhanh ch&oacute;ng giữa chế độ 1x v&agrave; zoom 2x quang học. Đồng thời, bạn c&ograve;n được trải nghiệm khả năng chụp ảnh với tốc độ l&ecirc;n đến 10x v&agrave; 6x khi quay video.</p>
+
+<p><img alt=\"Camera kép mang đến những bức ảnh ấn tượng\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iPhone-7plus-32gb-7_1.jpg\" /></p>
+
+<p>Nếu bạn ưa th&iacute;ch chụp ảnh selfie, camera trước với độ ph&acirc;n giải 7MB c&ugrave;ng c&ocirc;ng nghệ <a href=\"https://appleinsider.com/articles/15/09/10/how-apples-new-retina-flash----5-years-in-the-making----brightens-up-selfies-on-the-iphone-6s\" target=\"_blank\">Retina flash </a>sẽ mang đến cho bạn những bức ảnh ch&acirc;n dung tự nhi&ecirc;n v&agrave; xinh đẹp.</p>
+
+<h3>Đạt ti&ecirc;u chuẩn chống nước IP 67 c&ugrave;ng&nbsp;<strong>loa stereo k&eacute;p cho &acirc;m thanh sống động</strong></h3>
+
+<p><em>iPhone 7 Plus 32GB VN/A</em> được thiết kế c&oacute; khả năng chịu được nước v&agrave; bụi. Với ti&ecirc;u chuẩn chống nước IP67, điện thoại của bạn c&oacute; thể an to&agrave;n dưới nước ở độ s&acirc;u 1m trong khoảng thời gian 30 ph&uacute;t m&agrave; kh&ocirc;ng bị ảnh hưởng hay hư hỏng. Bạn sẽ y&ecirc;n t&acirc;m sử dụng điện thoại khi trời mưa m&agrave; kh&ocirc;ng sợ hỏng h&oacute;c. Kh&ocirc;ng sợ hư hỏng khi lỡ tay l&agrave;m đổ nước l&ecirc;n điện thoại của bạn. Khả năng chống bụi cũng tuyệt vời kh&ocirc;ng k&eacute;m, sản phẩm được gia c&ocirc;ng mịn m&agrave;ng kh&ocirc;ng b&aacute;m bụi v&agrave; hạn chế b&aacute;m d&iacute;nh mồi h&ocirc;i v&acirc;n tay.</p>
+
+<p><img alt=\"iPhone 7 Plus 32GB Chính hãng 8\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-10.jpg\" /></p>
+
+<p>Trong phi&ecirc;n bản <strong>iPhone 7 Plus 32GB</strong>, Apple đ&atilde; ch&iacute;nh thức loại bỏ jack cắm tai nghe 3.5 (mm) v&agrave; thay v&agrave;o đ&oacute; l&agrave; hệ thống loa k&eacute;p stereo gi&uacute;p &acirc;m thanh được truyền tải một c&aacute;ch sống động, chi tiết hơn gấp 2 lần so với c&aacute;c thế hệ cũ.</p>
+
+<p><img alt=\"iPhone 7 Plus 32GB Chính hãng 9\" src=\"https://cdn.cellphones.com.vn/media/wysiwyg/mobile/apple/iphone-7-Plus-32GB-Chinh-Hang-vna-11.jpg\" /></p>
+
+<p>Tuy nhi&ecirc;n, việc loại bỏ jack tai nghe 3.5 (mm) lại mang đến một v&agrave;i bất tiện kh&ocirc;ng mong muốn cho người d&ugrave;ng như việc phải sử dụng c&aacute;p chuyển đổi giữa jack 3.5 (mm) với cổng <a href=\"https://www.howtogeek.com/211843/usb-type-c-explained-what-it-is-and-why-youll-want-it/\" target=\"_blank\">USB Type-C</a>.&nbsp;</p>, `unit_price` = 12.000.000, `promotion_price` = 11.400.000, `products`.`updated_at` = 2020-04-07 05:23:06 where `id` = 1) at /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php:665)
+[stacktrace]
+#0 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('update `product...', Array, Object(Closure))
+#1 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(491): Illuminate\\Database\\Connection->run('update `product...', Array, Object(Closure))
+#2 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(424): Illuminate\\Database\\Connection->affectingStatement('update `product...', Array)
+#3 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2679): Illuminate\\Database\\Connection->update('update `product...', Array)
+#4 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(774): Illuminate\\Database\\Query\\Builder->update(Array)
+#5 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(745): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#6 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(660): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 /opt/lampp/htdocs/nmm/app/Http/Controllers/ProductController.php(95): Illuminate\\Database\\Eloquent\\Model->save()
+#8 [internal function]: App\\Http\\Controllers\\ProductController->postEditProduct(Object(Illuminate\\Http\\Request), '1')
+#9 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#10 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('postEditProduct', Array)
+#11 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProductController), 'postEditProduct')
+#12 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#13 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#14 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 /opt/lampp/htdocs/nmm/app/Http/Middleware/CheckLoginAdmin.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\CheckLoginAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /opt/lampp/htdocs/nmm/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#48 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#49 /opt/lampp/htdocs/nmm/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#50 {main}
+
+[previous exception] [object] (PDOException(code: 01000): SQLSTATE[01000]: Warning: 1265 Data truncated for column 'unit_price' at row 1 at /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php:484)
+[stacktrace]
+#0 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(484): PDOStatement->execute()
+#1 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(658): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('update `product...', Array)
+#2 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('update `product...', Array, Object(Closure))
+#3 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(491): Illuminate\\Database\\Connection->run('update `product...', Array, Object(Closure))
+#4 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Connection.php(424): Illuminate\\Database\\Connection->affectingStatement('update `product...', Array)
+#5 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2679): Illuminate\\Database\\Connection->update('update `product...', Array)
+#6 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(774): Illuminate\\Database\\Query\\Builder->update(Array)
+#7 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(745): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#8 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(660): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /opt/lampp/htdocs/nmm/app/Http/Controllers/ProductController.php(95): Illuminate\\Database\\Eloquent\\Model->save()
+#10 [internal function]: App\\Http\\Controllers\\ProductController->postEditProduct(Object(Illuminate\\Http\\Request), '1')
+#11 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#12 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('postEditProduct', Array)
+#13 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProductController), 'postEditProduct')
+#14 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#15 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#16 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /opt/lampp/htdocs/nmm/app/Http/Middleware/CheckLoginAdmin.php(20): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): App\\Http\\Middleware\\CheckLoginAdmin->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /opt/lampp/htdocs/nmm/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 /opt/lampp/htdocs/nmm/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 /opt/lampp/htdocs/nmm/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 {main}
+"} 

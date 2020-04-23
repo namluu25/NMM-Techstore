@@ -46,9 +46,9 @@
                         <li class="nav-item active"><a class="nav-link" href="<?php echo e(asset('shop/homepage')); ?>">Home</a></li>
                         <li class="nav-item submenu dropdown">
                             <a href="<?php echo e(asset('shop/category/1')); ?>" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Danh mục</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a class="nav-link" href="<?php echo e(asset('shop/category/1')); ?>">Theo loại</a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo e(asset('shop/brand/1')); ?>">Theo hãng</a></li>
+                            <ul class="dropdown-menu" id="dropdown">
+                                <li class="nav-item"><a class="nav-link" id="type" href="<?php echo e(asset('shop/category/1')); ?>">Theo loại</a></li>
+                                <li class="nav-item"><a class="nav-link" id="brand" href="<?php echo e(asset('shop/brand/1')); ?>">Theo hãng</a></li>
                             </ul>
                         </li>
 

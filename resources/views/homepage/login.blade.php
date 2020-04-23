@@ -27,7 +27,7 @@
 					<div class="hover">
 						<h4>New to our website?</h4>
 						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-						<a class="main_btn" href="registration.html">Create an Account</a>
+						<a class="main_btn" href="registration">Create an Account</a>
 					</div>
 				</div>
 			</div>
@@ -63,8 +63,7 @@
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" class="btn submit_btn">Log In</button>
-							<a href="#">Forgot Password?</a>
+							<button type="submit" value="submit" id="submit" class="btn submit_btn">Log In</button>
 						</div>
 					</form>
 				</div>

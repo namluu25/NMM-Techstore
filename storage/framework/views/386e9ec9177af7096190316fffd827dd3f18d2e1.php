@@ -1,7 +1,7 @@
 
 
 <?php $__env->startSection('content'); ?>
-<!--================Home Banner Area =================-->
+ <!--================Home Banner Area =================-->
 <section class="banner_area">
     <div class="banner_inner d-flex align-items-center">
 		<div class="container">
@@ -9,7 +9,7 @@
 				<h2>Login/Register</h2>
 				<div class="page_link">
 					<a href="index.html">Home</a>
-					<a href="login.html">Login</a>
+					<a href="registration.html">Register</a>
 				</div>
 			</div>
 		</div>
@@ -27,13 +27,13 @@
 					<div class="hover">
 						<h4>New to our website?</h4>
 						<p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-						<a class="main_btn" href="registration">Create an Account</a>
+						<a class="main_btn" href="#">Create an Account</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="login_form_inner">
-					<h3>Log in to enter</h3>
+				<div class="login_form_inner reg_form">
+					<h3>Create an Account</h3>
 					<?php if(count($errors)>0): ?>
 	                    <div class="alert alert-danger">
 	                        <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $err): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -49,13 +49,28 @@
 
 	                    </div>
 	                <?php endif; ?>
-					<form class="row login_form" action="login" method="post" id="contactForm" novalidate="novalidate">
+					<form class="row login_form" action="registration" method="post" id="contactForm" novalidate="novalidate">
 						<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" />
 						<div class="col-md-12 form-group">
-							<input type="text" class="form-control" id="email" name="email" placeholder="email">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="username" name="username" placeholder="Username">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="address" name="address" placeholder="Address">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
 						</div>
 						<div class="col-md-12 form-group">
 							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="password" class="form-control" id="pass" name="passwordAgain" placeholder="Confirm password">
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="creat_account">
@@ -64,7 +79,7 @@
 							</div>
 						</div>
 						<div class="col-md-12 form-group">
-							<button type="submit" value="submit" id="submit" class="btn submit_btn">Log In</button>
+							<button type="submit" value="submit" id= "submit" class="btn submit_btn">Register</button>
 						</div>
 					</form>
 				</div>
@@ -74,5 +89,4 @@
 </section>
 <!--================End Login Box Area =================-->
 <?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('homepage.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/nmm/resources/views/homepage/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('homepage.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/nmm/resources/views/homepage/registration.blade.php ENDPATH**/ ?>
