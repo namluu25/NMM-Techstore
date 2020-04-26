@@ -100,7 +100,7 @@
                         <div class="item">
                             <div class="f_p_item">
                                 <div class="f_p_img">   
-                                    <a href="/nmm/public/shop/product/{{$featureItem->id}}">
+                                    <a href="/nmm/public/shop/product/{{$featureItem->id}}" id=hotproduct>
                                     <img height="262" src="/nmm/public/{{$featureItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a style="cursor: pointer" class="wish-list" productid="{{$featureItem->id}}"><i class="lnr lnr-heart"></i></a>
@@ -139,7 +139,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
-                                    <a href="/nmm/public/shop/product/{{$latestItem->id}}">
+                                    <a href="/nmm/public/shop/product/{{$latestItem->id}}" id=newproduct>
                                     <img height="262" src="/nmm/public/{{$latestItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a style="cursor: pointer" class="wish-list" productid="{{$latestItem->id}}"><i class="lnr lnr-heart"></i></a>
