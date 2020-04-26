@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="150px" src="https://raw.githubusercontent.com/namluu25/NMM-Techstore/master/logo.png">
+  <img height="150px" src="https://raw.githubusercontent.com/namluu25/NMM-Techstore/master/public/logo.png">
 </p>
 
 # NMM Techstore
@@ -16,21 +16,21 @@ Time is a valuable thing. With time, we use it to think, to work, to relax or to
 
 ### Technologies
 - PHP Laravel 
-- HTML, CSS, JavaScript, bootstrap, JQuery
+- HTML, CSS, JavaScript, Bootstrap, JQuery
 
 ## Installation
 
-Clone Repo of the project to your device by 
+Clone repo of the project to your device by 
 ```
 git clone https://github.com/namluu25/NMM-Techstore.git
 ```
 
-Install all the necessary files & documents to run the application:
+Install all the necessary files & documents to run the application
 - Xampp
-- Visual Code Studio or Sublime Text 3
+- Visual Studio Code/ Sublime Text 3
 - Composer
 
-Access “localhost” and add file “ nmm_database.sql “ for database & run the application 
+Access **`localhost`** and add file **`nmm_database.sql`** for database & run the application.
 
 
 
