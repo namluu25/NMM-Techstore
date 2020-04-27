@@ -6,7 +6,7 @@ describe('check if products show up perfectly', () => {
     })
 
     it ('go to home page', () =>{
-        cy.visit('http://localhost:8080/nmm/public/shop/homepage');
+        cy.visit('http://localhost/nmm/public/shop/homepage');
     })
 
     it ('check product view', () => {

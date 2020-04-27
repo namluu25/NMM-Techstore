@@ -5,7 +5,7 @@ describe('test header', () => {
         return false
     })
     it('go to homepage', () => {
-        cy.visit('http://localhost:8080/nmm/public/shop/homepage');
+        cy.visit('http://localhost/nmm/public/shop/homepage');
     })
     it('test the header', () => {
       cy.contains('Home').click()

@@ -5,7 +5,7 @@ describe('test loginn', () => {
         return false
     })
     it('go to login page', () => {
-        cy.visit('http://localhost:8080/nmm/public/shop/login');
+        cy.visit('http://localhost/nmm/public/shop/login');
     })
     it('test the login function', () => {
         cy.get('#email')

@@ -5,7 +5,7 @@ describe('Dropdown menu on category test', () => {
         return false
     })
     beforeEach(() => {
-        cy.visit('http://localhost:8080/nmm/public/shop/homepage')
+        cy.visit('http://localhost/nmm/public/shop/homepage')
         cy.get('#navbarSupportedContent').contains('Danh mục')
             .trigger('mouseover')    
             .click()

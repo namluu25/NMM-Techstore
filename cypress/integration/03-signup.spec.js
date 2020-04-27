@@ -5,7 +5,7 @@ describe('test register', () => {
         return false
     })
     it('go to register page', () => {
-        cy.visit('http://localhost:8080/nmm/public/shop/registration');
+        cy.visit('http://localhost/nmm/public/shop/registration');
     })
     it('test the register function', () => {
         cy.get('#name')
